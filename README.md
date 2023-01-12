@@ -3,11 +3,6 @@
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](link). 
 
 ## Requirements
-Install the following:
-* tensorflow (2.5.0 or later)
-* numpy
-* scipy
-or simply try:
 ```
 pip install -r requirements.txt
 ```
