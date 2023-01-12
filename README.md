@@ -3,13 +3,14 @@
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](link). 
 
 ## Requirements
-```
-pip install -r requirements.txt
-```
-or
+Install the following:
 * tensorflow (2.5.0 or later)
 * numpy
 * scipy
+or simply try:
+```
+pip install -r requirements.txt
+```
 
 ## Device (CPU / GPU)
 In general, <code>train.py</code> assumes the use of a GPU, while <code>infer.py</code> uses CPU. To train a model with CPU, simply modify the flag parameter in <code>config_gpu(flag)</code> from <code>flag=0</code> to <code>flag=-1</code>. A brief description can be found in <code>config_gpu.py</code>. 
