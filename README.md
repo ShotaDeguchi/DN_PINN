@@ -14,7 +14,7 @@ In general, <code>train.py</code> assumes the use of a GPU, while <code>infer.py
 Please cite our paper as: 
 ```
 @article{DEGUCHI202x,
-  title={Dynamic & Norm-based Weights to Normalize Imbalance in Back-Propageted Gradients of Physics-Informed Neural Networks},
+  title={Dynamic \& Norm-based Weights to Normalize Imbalance in Back-Propageted Gradients of Physics-Informed Neural Networks},
   author={Shota DEGUCHI and Mitsuteru ASAI},
   journal={JOURNAL XXX},
   volume={XXX},
