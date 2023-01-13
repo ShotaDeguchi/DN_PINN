@@ -1,7 +1,5 @@
 # ignored files / directories
 
-/.gitignore
-
 ########################################
 
 /01_Burgers/00_PINN/__pycache__/*
