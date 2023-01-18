@@ -1,8 +1,19 @@
 # DN-PINNs (Dynamically Normalized PINNs)
 
+<!-- 
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our paper: 
 
 Shota Deguchi, Mitsuteru Asai: [Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks](link), ..., 2023. 
+
+comment out 
+multiple
+lines
+-->
+
+This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](): 
+
+Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks, 2023. 
+
 
 ## Requirements
 ```
