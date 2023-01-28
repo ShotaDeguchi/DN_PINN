@@ -33,7 +33,7 @@ To train a model, run
 ```
 python train.py [-e EPOCHS] [-b BATCH_SIZE] [-p PATIENCE]
 ```
-(note: `BATCH_SIZE == -1` executes full-batch training, and mini-batching is only implemented in `03_AllenCahn`)
+(note: `BATCH_SIZE == -1` (default) executes full-batch training, and mini-batching is only implemented in `03_AllenCahn`)
 
 After training, load parameters saved in `saved_weights` or `best_weights` and evaluate the model. To do so, run
 ```
