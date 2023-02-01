@@ -51,6 +51,7 @@ For comparison, we have implemented several variants:
 * `ID_PINN` - inverse-Dirichlet weighting scheme proposed by [Maddu+2022](https://dx.doi.org/10.1088/2632-2153/ac3712)
 * `DN_PINN` - dynamic & norm-based weighting scheme proposed in [our paper](link)
 
+<!-- 
 ## Citation
 Please cite our paper as: 
 ```
@@ -65,6 +66,7 @@ Please cite our paper as:
   doi={XXX}
 }
 ```
+-->
 
 ## License
 MIT License
