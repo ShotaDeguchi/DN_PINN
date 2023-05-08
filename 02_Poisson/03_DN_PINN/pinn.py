@@ -282,7 +282,7 @@ class PINN(tf.keras.Model):
         _norm_pde = tf.norm(_grad_pde, ord=p)
         _norm_bc  = tf.norm(_grad_bc,  ord=p)
 
-        # elongation
+        # compute gamma
         gamma_bc = _norm_pde / _norm_bc
 
         # exponential decay
