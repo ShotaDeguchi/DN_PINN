@@ -131,7 +131,6 @@ def main(args):
     gamma_bc_log = []   # weight
 
     # training
-    tau = 10   # update interval of gamma
     wait = 0
     loss_best = 9999.
     loss_save = 9999.

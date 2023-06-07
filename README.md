@@ -4,10 +4,6 @@
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our paper: 
 
 Shota Deguchi, Mitsuteru Asai: [Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks](link), ..., 2023. 
-
-comment out 
-multiple
-lines
 -->
 
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](): 
@@ -19,6 +15,13 @@ Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalan
 ```
 pip install -r requirements.txt
 ```
+
+<!-- 
+numpy==1.19.5
+pyyaml==6.0
+scipy==1.5.4
+tensorflow==2.5.0
+-->
 
 ## Usage
 Please make the following directories
@@ -33,7 +36,7 @@ To train a model, run
 ```
 python train.py [-e EPOCHS] [-b BATCH_SIZE] [-p PATIENCE]
 ```
-(note: `BATCH_SIZE == -1` executes full-batch training, and mini-batching is only implemented in `03_AllenCahn`)
+(note: `BATCH_SIZE == -1` (default) executes full-batch training, and mini-batching is only implemented in `03_AllenCahn`)
 
 After training, load parameters saved in `saved_weights` or `best_weights` and evaluate the model. To do so, run
 ```
@@ -51,6 +54,7 @@ For comparison, we have implemented several variants:
 * `ID_PINN` - inverse-Dirichlet weighting scheme proposed by [Maddu+2022](https://dx.doi.org/10.1088/2632-2153/ac3712)
 * `DN_PINN` - dynamic & norm-based weighting scheme proposed in [our paper](link)
 
+<!-- 
 ## Citation
 Please cite our paper as: 
 ```
@@ -65,6 +69,7 @@ Please cite our paper as:
   doi={XXX}
 }
 ```
+-->
 
 ## License
 MIT License

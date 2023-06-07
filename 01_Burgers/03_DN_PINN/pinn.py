@@ -299,7 +299,7 @@ class PINN(tf.keras.Model):
         _norm_ic  = tf.norm(_grad_ic,  ord=p)
         _norm_bc  = tf.norm(_grad_bc,  ord=p)
 
-        # elongation
+        # compute gamma
         gamma_ic = _norm_pde / _norm_ic
         gamma_bc = _norm_pde / _norm_bc
 
