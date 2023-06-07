@@ -45,31 +45,6 @@ def main():
     in_ub = tf.constant([xmax, ymax], dtype=tf.float32)
     in_mean = tf.reduce_mean([in_lb, in_ub], axis=0)
 
-    # sample training points
-    N_pde = int(2500)
-    N_bc  = int( 100)   # 100 / each NSEW bounds -> 400 in total
-
-    # PDE
-    x_pde = tf.random.uniform((N_pde, 1), in_lb[0], in_ub[0], dtype=tf.float32)
-    y_pde = tf.random.uniform((N_pde, 1), in_lb[1], in_ub[1], dtype=tf.float32)
-    g_pde = tf.zeros_like(x_pde)   # this is not solution u, but govering eq residual
-    # north bound
-    x_nth = tf.random.uniform((N_bc, 1), in_lb[0], in_ub[0], dtype=tf.float32, seed=seed)
-    y_nth = tf.random.uniform((N_bc, 1), in_ub[1], in_ub[1], dtype=tf.float32, seed=seed)
-    u_nth = tf.cos(omega * x_nth) * tf.sin(omega * y_nth)
-    # south
-    x_sth = tf.random.uniform((N_bc, 1), in_lb[0], in_ub[0], dtype=tf.float32, seed=seed)
-    y_sth = tf.random.uniform((N_bc, 1), in_lb[1], in_lb[1], dtype=tf.float32, seed=seed)
-    u_sth = tf.cos(omega * x_sth) * tf.sin(omega * y_sth)
-    # east
-    x_est = tf.random.uniform((N_bc, 1), in_ub[0], in_ub[0], dtype=tf.float32, seed=seed)
-    y_est = tf.random.uniform((N_bc, 1), in_lb[1], in_ub[1], dtype=tf.float32, seed=seed)
-    u_est = tf.cos(omega * x_est) * tf.sin(omega * y_est)
-    # west
-    x_wst = tf.random.uniform((N_bc, 1), in_lb[0], in_lb[0], dtype=tf.float32, seed=seed)
-    y_wst = tf.random.uniform((N_bc, 1), in_lb[1], in_ub[1], dtype=tf.float32, seed=seed)
-    u_wst = tf.cos(omega * x_wst) * tf.sin(omega * y_wst)
-
     # define a model
     f_in  = settings["NET_ARCH"]["f_in"]
     f_out = settings["NET_ARCH"]["f_out"]
@@ -100,16 +75,6 @@ def main():
         vmin= 0., vmax=.05,
         xmin=xmin, xmax=xmax, xlabel="x", 
         ymin=ymin, ymax=ymax, ylabel="y"
-    )
-    plot_grad_dist(
-        epoch,
-        model, 
-        depth,
-        x_pde, y_pde, g_pde, 
-        x_nth, y_nth, u_nth, 
-        x_sth, y_sth, u_sth, 
-        x_est, y_est, u_est, 
-        x_wst, y_wst, u_wst
     )
 
 

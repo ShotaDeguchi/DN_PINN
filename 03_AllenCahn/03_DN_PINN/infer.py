@@ -36,28 +36,6 @@ def main():
     in_ub = tf.constant([tmax, xmax], dtype=tf.float32)
     in_mean = tf.reduce_mean([in_lb, in_ub], axis=0)
 
-    # sample training points
-    N_pde = int(2e4)
-    N_ic  = int(512)
-    N_bc  = int(1e2)
-
-    # PDE
-    t_pde = tf.random.uniform((N_pde, 1), in_lb[0], in_ub[0], dtype=tf.float32)
-    x_pde = tf.random.uniform((N_pde, 1), in_lb[1], in_ub[1], dtype=tf.float32)
-    g_pde = tf.zeros_like(t_pde)   # this is not solution u, but govering eq residual
-    # IC
-    t_ic = in_lb[0] * tf.ones((N_ic, 1), dtype=tf.float32)
-    x_ic = tf.random.uniform((N_ic, 1), in_lb[1], in_ub[1], dtype=tf.float32, seed=seed)
-    u_ic = (x_ic ** 2) * tf.cos(np.pi * x_ic)
-    # BC1 (u(t, x=-1) = 0)
-    t_bc1 = tf.random.uniform((N_bc, 1), in_lb[0], in_ub[0], dtype=tf.float32, seed=seed)
-    x_bc1 = tf.random.uniform((N_bc, 1), in_lb[1], in_lb[1], dtype=tf.float32, seed=seed)
-    u_bc1 = tf.zeros_like(t_bc1, dtype=tf.float32)
-    # BC2 (u(t, x= 1) = 0)
-    t_bc2 = tf.identity(t_bc1)
-    x_bc2 = tf.random.uniform((N_bc, 1), in_ub[1], in_ub[1], dtype=tf.float32, seed=seed)
-    u_bc2 = tf.zeros_like(t_bc2, dtype=tf.float32)
-
     # reference
     t_ref, x_ref = np.meshgrid(t, x)
     t_ref = t_ref.reshape(-1, 1)
@@ -98,15 +76,6 @@ def main():
         vmin= 0., vmax=.05,
         xmin=tmin, xmax=tmax, xlabel="t", 
         ymin=xmin, ymax=xmax, ylabel="x"
-    )
-    plot_grad_dist(
-        epoch,
-        model, 
-        depth,
-        t_pde, x_pde, g_pde, 
-        t_ic,  x_ic,  u_ic, 
-        t_bc1, x_bc1, u_bc1, 
-        t_bc2, x_bc2, u_bc2
     )
 
 
