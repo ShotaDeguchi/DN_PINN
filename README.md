@@ -44,7 +44,7 @@ python infer.py
 ```
 
 ## Device (CPU / GPU)
-In general, <code>train.py</code> assumes the use of a GPU, while <code>infer.py</code> uses CPU. To train a model with CPU, simply modify the flag parameter in <code>config_gpu(flag)</code> from <code>flag=0</code> to <code>flag=-1</code>. A brief description can be found in <code>config_gpu.py</code>. 
+<code>train.py</code> assumes the use of a GPU, while <code>infer.py</code> uses the CPU. To train a model on the CPU, simply change the flag parameter in <code>config_gpu(flag)</code> from <code>flag=0</code> to <code>flag=-1</code>. A short description can be found in <code>config_gpu.py</code>. 
 
 ## Variants
 For comparison, we have implemented several variants:
