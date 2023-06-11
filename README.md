@@ -38,7 +38,7 @@ python train.py [-e EPOCHS] [-b BATCH_SIZE] [-p PATIENCE]
 ```
 (note: `BATCH_SIZE == -1` (default) executes full-batch training, and mini-batching is only implemented in `03_AllenCahn`)
 
-After training, load parameters saved in `saved_weights` or `best_weights` and evaluate the model. To do so, run
+After training, load the parameters stored in `saved_weights` or `best_weights` and evaluate the model. To do this, run
 ```
 python infer.py
 ```
@@ -53,6 +53,7 @@ For comparison, we have implemented several variants:
 * `MA_PINN` - max-average weighting scheme proposed by [Wang+2021](https://doi.org/10.1137/20M1318043)
 * `ID_PINN` - inverse-Dirichlet weighting scheme proposed by [Maddu+2022](https://dx.doi.org/10.1088/2632-2153/ac3712)
 * `DN_PINN` - dynamic & norm-based weighting scheme proposed in [our paper](link)
+* `DN_PINN_Bias_Corr` - dynamic & norm-based weighting scheme with bias correction proposed in [our paper](link)
 
 <!-- 
 ## Citation
