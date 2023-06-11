@@ -22,6 +22,11 @@
 /01_Burgers/03_DN_PINN/best_weights/*
 /01_Burgers/03_DN_PINN/saved_weights/*
 
+/01_Burgers/04_DN_PINN_Bias_Corr/__pycache__/*
+/01_Burgers/04_DN_PINN_Bias_Corr/results/*
+/01_Burgers/04_DN_PINN_Bias_Corr/best_weights/*
+/01_Burgers/04_DN_PINN_Bias_Corr/saved_weights/*
+
 ########################################
 
 /02_Poisson/00_PINN/__pycache__/*
@@ -43,6 +48,11 @@
 /02_Poisson/03_DN_PINN/results/*
 /02_Poisson/03_DN_PINN/best_weights/*
 /02_Poisson/03_DN_PINN/saved_weights/*
+
+/02_Poisson/04_DN_PINN_Bias_Corr/__pycache__/*
+/02_Poisson/04_DN_PINN_Bias_Corr/results/*
+/02_Poisson/04_DN_PINN_Bias_Corr/best_weights/*
+/02_Poisson/04_DN_PINN_Bias_Corr/saved_weights/*
 
 ########################################
 
