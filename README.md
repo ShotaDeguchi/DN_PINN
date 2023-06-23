@@ -3,7 +3,7 @@
 <!-- 
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our paper: 
 
-Shota Deguchi, Mitsuteru Asai: [Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks](link), ..., 2023. 
+Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks, *Journal of Physics Communications*, 2023 (doi: [doi](link))
 -->
 
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](): 
@@ -60,13 +60,13 @@ For comparison, we have implemented several variants:
 Please cite our paper as: 
 ```
 @article{DEGUCHI202x,
-  title={Dynamic \& Norm-based Weights to Normalize Imbalance in Back-Propageted Gradients of Physics-Informed Neural Networks},
+  title={Dynamic \& norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
   author={Shota DEGUCHI and Mitsuteru ASAI},
-  journal={JOURNAL XXX},
+  journal={Journal of Physics Communications},
   volume={XXX},
   number={XXX},
   pages={XXX-XXX},
-  year={202x},
+  year={2023},
   doi={XXX}
 }
 ```
