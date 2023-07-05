@@ -44,7 +44,7 @@ For comparison, we have implemented several variants:
 ## Citation
 Please cite our paper as: 
 ```
-@article{10.1088/2399-6528/ace416,
+@article{Deguchi2023dnpinn,
 	author={Deguchi, Shota and Asai, Mitsuteru},
 	title={Dynamic and norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
 	journal={Journal of Physics Communications},
