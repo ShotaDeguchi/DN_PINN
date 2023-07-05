@@ -1,27 +1,13 @@
 # DN-PINNs (Dynamically Normalized PINNs)
 
-<!-- 
 This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our paper: 
 
-Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks, *Journal of Physics Communications*, 2023 (doi: [doi](link))
--->
-
-This is a TensorFlow implementation of Dynamically Normalized Physics-Informed Neural Networks, described in our [paper](): 
-
-Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks, 2023. 
-
+Shota Deguchi, Mitsuteru Asai: Dynamic & norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks, *Journal of Physics Communications*, 2023 (doi: [https://doi.org/10.1088/2399-6528/ace416](https://doi.org/10.1088/2399-6528/ace416))
 
 ## Requirements
 ```
 pip install -r requirements.txt
 ```
-
-<!-- 
-numpy==1.19.5
-pyyaml==6.0
-scipy==1.5.4
-tensorflow==2.5.0
--->
 
 ## Usage
 Please make the following directories
@@ -52,25 +38,21 @@ For comparison, we have implemented several variants:
 * `PINN` - original formulation by [Raissi+2019](https://doi.org/10.1016/j.jcp.2018.10.045)
 * `MA_PINN` - max-average weighting scheme proposed by [Wang+2021](https://doi.org/10.1137/20M1318043)
 * `ID_PINN` - inverse-Dirichlet weighting scheme proposed by [Maddu+2022](https://dx.doi.org/10.1088/2632-2153/ac3712)
-* `DN_PINN` - dynamic & norm-based weighting scheme proposed in [our paper](link)
-* `DN_PINN_Bias_Corr` - dynamic & norm-based weighting scheme with bias correction proposed in [our paper](link)
+* `DN_PINN` - dynamic & norm-based weighting scheme proposed in our paper
+* `DN_PINN_Bias_Corr` - dynamic & norm-based weighting scheme with bias correction proposed in our paper
 
-<!-- 
 ## Citation
 Please cite our paper as: 
 ```
-@article{DEGUCHI202x,
-  title={Dynamic \& norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
-  author={Shota DEGUCHI and Mitsuteru ASAI},
-  journal={Journal of Physics Communications},
-  volume={XXX},
-  number={XXX},
-  pages={XXX-XXX},
-  year={2023},
-  doi={XXX}
+@article{10.1088/2399-6528/ace416,
+	author={Deguchi, Shota and Asai, Mitsuteru},
+	title={Dynamic and norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
+	journal={Journal of Physics Communications},
+	url={http://iopscience.iop.org/article/10.1088/2399-6528/ace416},
+	year={2023},
+	doi={https://doi.org/10.1088/2399-6528/ace416}
 }
 ```
--->
 
 ## License
 MIT License
