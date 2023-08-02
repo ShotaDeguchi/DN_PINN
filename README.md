@@ -44,13 +44,19 @@ For comparison, we have implemented several variants:
 ## Citation
 Please cite our paper as: 
 ```
-@article{Deguchi2023dnpinn,
-	author={Deguchi, Shota and Asai, Mitsuteru},
-	title={Dynamic and norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
-	journal={Journal of Physics Communications},
-	url={http://iopscience.iop.org/article/10.1088/2399-6528/ace416},
-	year={2023},
-	doi={https://doi.org/10.1088/2399-6528/ace416}
+@article{Deguchi_2023,
+	doi = {10.1088/2399-6528/ace416},
+	url = {https://dx.doi.org/10.1088/2399-6528/ace416},
+	year = {2023},
+	month = {jul},
+	publisher = {IOP Publishing},
+	volume = {7},
+	number = {7},
+	pages = {075005},
+	author = {Shota Deguchi and Mitsuteru Asai},
+	title = {Dynamic &amp; norm-based weights to normalize imbalance in back-propagated gradients of physics-informed neural networks},
+	journal = {Journal of Physics Communications},
+	abstract = {Physics-Informed Neural Networks (PINNs) have been a promising machine learning model for evaluating various physical problems. Despite their success in solving many types of partial differential equations (PDEs), some problems have been found to be difficult to learn, implying that the baseline PINNs is biased towards learning the governing PDEs while relatively neglecting given initial or boundary conditions. In this work, we propose Dynamically Normalized Physics-Informed Neural Networks (DN-PINNs), a method to train PINNs while evenly distributing multiple back-propagated gradient components. DN-PINNs determine the relative weights assigned to initial or boundary condition losses based on gradient norms, and the weights are updated dynamically during training. Through several numerical experiments, we demonstrate that DN-PINNs effectively avoids the imbalance in multiple gradients and improves the inference accuracy while keeping the additional computational cost within a reasonable range. Furthermore, we compare DN-PINNs with other PINNs variants and empirically show that DN-PINNs is competitive with or outperforms them. In addition, since DN-PINN uses exponential decay to update the relative weight, the weights obtained are biased toward the initial values. We study this initialization bias and show that a simple bias correction technique can alleviate this problem.}
 }
 ```
 
